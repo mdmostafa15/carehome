@@ -1,0 +1,14 @@
+.services {
+    padding: 48px 0;
+    text-align: center;
+    text-transform: capitalize;
+  }
+  .services-center {
+    display: flex;
+    justify-content: space-around;
+  }
+  .section-title {
+    text-align: center;
+    font-size: 36px;  
+    padding: 25px 0;
+  }

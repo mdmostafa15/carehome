@@ -1,0 +1,20 @@
+.service {
+    width: 23%;
+    padding: 10px;
+    color: #fdfbfb;
+}
+.service h6 {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    display: inline;
+}
+.service p {
+    text-align: justify;
+}
+.nur-icon {
+    width: 25px;
+    height: 25px;
+    margin-bottom: -5px;
+    padding-right: 10px;
+}

@@ -1,0 +1,45 @@
+.seaVi {
+	padding :70px 0;
+}
+
+.form {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+.single-form {
+	flex-direction: column;
+	justify-content: center;
+	font-weight: 300;
+	padding: 14px 10px;
+	font-size: 18px;
+}
+
+.single-form input {
+	padding: 15px 30px 15px 10px;	
+	border-radius: 10px;
+	border: none;
+}
+
+
+.btn-cont {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	padding: 15px;
+	font-size: 18px;
+}
+
+.btn input {
+	padding: 14px 30px;	
+	border-radius: 10px;
+	border: none;
+}
+.btn input:hover {
+	background-color: #052280;
+  	color: #ffffff;
+	transition: 0.6s;
+	font-size: 16px;
+	font-weight: 500;
+}

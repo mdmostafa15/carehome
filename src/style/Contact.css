@@ -1,0 +1,19 @@
+.contact {
+    margin-right: 0px;
+    margin-left: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+    width: 180px;
+    color:#8e9ed3;
+}
+
+.contact span {
+    font-size: medium;
+    font-weight: 400;
+}
+.icon {
+   width: 20px;
+   height: 20px;
+   margin-bottom: -5px;
+   padding-right: 10px;
+}

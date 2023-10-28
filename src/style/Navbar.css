@@ -1,0 +1,25 @@
+#nav {
+    height: 60px;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-around;
+    justify-items: auto;
+}
+
+.navbar a {
+    text-transform: uppercase;
+    font-weight: bold;
+    text-decoration: none;
+    color: #fdfbfb;
+    padding: 18px 30px;
+    transition: 0.5s;
+}
+
+.navbar a:hover {
+    background-color: #fdfbfb;
+    color: #8e9ed3;
+    border-radius: 25%;
+    transform: scale(1.1);
+}
