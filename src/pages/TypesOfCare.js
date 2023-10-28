@@ -5,6 +5,7 @@ import banner from "../images/banner2.jpg";
 import Hero from "../components/Hero.js";
 import fetchData from "../components/myFunctions.js";
 import { useLocation } from "react-router-dom";
+import NotFoundComp from "../components/NotFundComp";
 
 
 export default function TypesOfCare() {
@@ -62,12 +63,17 @@ export default function TypesOfCare() {
         })
         
     }
+    
+    const temp = (state.length === 0)?<NotFoundComp />
+    :<CareCardCont state={state} len={state.length} />
 
     return (
         <>
-            <Hero bnr={banner} />
-            <SearchSec fHandler={formHandler} />
-            <CareCardCont state={state} len={state.length} />
+        <Hero bnr={banner} />
+        <SearchSec fHandler={formHandler} />
+        {
+           temp
+        }
         </>
     )
 }

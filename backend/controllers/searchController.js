@@ -11,7 +11,6 @@ const express = require('express'),
             item.tags = JSON.parse(item.tags);
             return item;
         })
-        console.log(carehome);
         res.send(carehome);
     });
 
