@@ -8,7 +8,7 @@ const items = [
     },
     {
         path: "/typesofcare",
-        name:"Types of care"
+        name:"care homes"
     },
     {
         path: "/helpnadvice",

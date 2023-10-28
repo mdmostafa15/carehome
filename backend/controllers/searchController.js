@@ -3,7 +3,7 @@ const express = require('express'),
     
     const service = require('../models/searchModel.js');
     
-
+// http://localhost:5000/api/carehome/search
     router.get('/', async (req, res) => {
         const carehome = await service.getCarehomeByQuery(req.query);
         carehome.forEach((item)=>{
