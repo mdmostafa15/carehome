@@ -31,43 +31,57 @@ export default function TypesOfCare() {
     function formHandler(e) {
         e.preventDefault();
 
-        const postal = e.target[0].value;
-        const hName = e.target[1].value;
-        const area = e.target[2].value;
+        const temp = e.target[0].value;
 
         let url = 'http://localhost:5000/api/carehome/search';
 
-        if (postal !== "") {
-            url = `${url}?postal=${postal}`;
+        if(Number.parseInt(temp)){
+            url = `${url}?postal=${temp}`;
+        }
+        else if(temp.trim().indexOf(" ") < 0 && temp !== ""){
+            url = `${url}?area=${temp}`;
+        }
+        else if (temp.trim().indexOf(" ") !== -1){
+            url = `${url}?home=${temp}`;
+        }
+        
+        // const postal = e.target[0].value;
+        // const hName = e.target[1].value;
+        // const area = e.target[2].value;
 
-            if (hName !== ""){
-                url=`${url}&home=${hName}`
-            }
-            if (area !== ""){
-                url=`${url}&area=${area}`
-            }
+
+        // if (postal !== "") {
+        //     url = `${url}?postal=${postal}`;
+
+        //     if (hName !== ""){
+        //         url=`${url}&home=${hName}`
+        //     }
+        //     if (area !== ""){
+        //         url=`${url}&area=${area}`
+        //     }
             
-        }else if (hName !== ""){
-            url = `${url}?home=${hName}`
+        // }else if (hName !== ""){
+        //     url = `${url}?home=${hName}`
 
-            if (postal !== ""){
-                url=`${url}&postal=${postal}`
-            }
-            if (area !== ""){
-                url=`${url}&area=${area}`
-            }
+        //     if (postal !== ""){
+        //         url=`${url}&postal=${postal}`
+        //     }
+        //     if (area !== ""){
+        //         url=`${url}&area=${area}`
+        //     }
             
-        }else if (area !== "") {
-            url = `${url}?area=${area}`
+        // }else if (area !== "") {
+        //     url = `${url}?area=${area}`
 
-            if (hName !== ""){
-                url=`${url}&home=${hName}`
-            }
-            if (postal !== ""){
-                url=`${url}&postal=${postal}`
-            }
-        } 
-        if(postal === "" && area === "" && hName === "")
+        //     if (hName !== ""){
+        //         url=`${url}&home=${hName}`
+        //     }
+        //     if (postal !== ""){
+        //         url=`${url}&postal=${postal}`
+        //     }
+        // } 
+        // if(postal === "" || area === "" || hName === "")
+        if(temp === "")
             url = 'http://localhost:5000/api/carehome/';
         
         fetchData(url).then((data)=>{

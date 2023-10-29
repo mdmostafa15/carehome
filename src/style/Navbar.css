@@ -26,3 +26,11 @@
     border-radius: 25%;
     transform: scale(1.1);
 }
+
+.active {
+    background-color: #fdfbfb;
+    /* color: darkgreen; */
+    color: indigo !important;
+    /* color: purple; */
+    border-radius: 25%;
+}

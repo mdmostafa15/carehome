@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import "../style/Navbar.css";
 
 const items = [
@@ -25,7 +25,7 @@ const items = [
 function Navbar(params) {
     
     const menu = items.map((item,i)=>{
-        return(<Link key={i} to={item.path}>{item.name}</Link>);
+        return(<NavLink key={i} to={item.path}>{item.name}</NavLink>);
      })
 
     return(

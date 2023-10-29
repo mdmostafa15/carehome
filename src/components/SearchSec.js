@@ -7,8 +7,8 @@ export default function SearchSec (params) {
     // const location = useLocation();
 
     let [postal, setPostal] = useState("");
-    let [area, setArea] = useState("");
-    let [hName, setHName] = useState("");
+    // let [area, setArea] = useState("");
+    // let [hName, setHName] = useState("");
 
     
     function inputHandler (e) {
@@ -17,11 +17,12 @@ export default function SearchSec (params) {
         const name = e.target.name;
         if(name === "postal"){
             setPostal(value);
-        }else if(name === "area"){
-            setArea(value);
-        }else if(name === "careHome"){
-            setHName(value)
         }
+        // else if(name === "area"){
+        //     setArea(value);
+        // }else if(name === "careHome"){
+        //     setHName(value)
+        // }
     }
 
     return (
@@ -33,11 +34,11 @@ export default function SearchSec (params) {
                     }}>Find your nearest care home</h1>
                 <form action="#" onSubmit={params.fHandler}>
                     <div className="form">
-                        <INputSrch lableFor="postal" labelCont="Area Code" iName="postal" iPlaceholder="Enter a location code..." iValue={postal} iType="text" iHandlerFun={inputHandler} />
+                        <INputSrch lableFor="postal" labelCont="Area name/postal Code or Branch name" iName="postal" iPlaceholder="search branch or location ..." iValue={postal} iType="text" iHandlerFun={inputHandler} />
 
-                        <INputSrch lableFor="careHome" labelCont="Care Home" iPlaceholder="Care Home Name ..." iName="careHome" iValue={hName} iType="text" iHandlerFun={inputHandler} />
+                        {/* <INputSrch lableFor="careHome" labelCont="Care Home" iPlaceholder="Care Home Name ..." iName="careHome" iValue={hName} iType="text" iHandlerFun={inputHandler} />
 
-                        <INputSrch lableFor="area" labelCont="Area Name" iName="area" iPlaceholder="Enter your Area Name ..." iValue={area} iType="text" iHandlerFun={inputHandler} />
+                        <INputSrch lableFor="area" labelCont="Area Name" iName="area" iPlaceholder="Enter your Area Name ..." iValue={area} iType="text" iHandlerFun={inputHandler} /> */}
 
                         
                         <div className="btn-cont">
