@@ -13,7 +13,7 @@ function myFunc(state, arrLen) {
             <article key={i} className="card">
                 <div className="img-container">
                     <img src={item.image} alt="nursing" />
-                    <div className="care-item">
+                    <div className="care-item U-bg-clr-bw">
                         <h4>{item.home}</h4>
                         <p>{`${item.holding} ${item.area} ${item.postal}`}</p>
                     </div>
@@ -27,7 +27,7 @@ function myFunc(state, arrLen) {
                         }
                     </div>
                 </div>
-                <Link to="/carecenter" state={item} className="card-info">Find more ...</Link>
+                <Link to="/carecenter" state={item} className="card-info U-bg-clr-bw">Find more ...</Link>
             </article>
         )
     })

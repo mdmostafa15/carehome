@@ -33,7 +33,7 @@ export default function SearchSec (params) {
                     }}>Find your nearest care home</h1>
                 <form action="#" onSubmit={params.fHandler}>
                     <div className="form">
-                        <INputSrch lableFor="postal" labelCont="Postal Code" iName="postal" iPlaceholder="Enter a location code..." iValue={postal} iType="text" iHandlerFun={inputHandler} />
+                        <INputSrch lableFor="postal" labelCont="Area Code" iName="postal" iPlaceholder="Enter a location code..." iValue={postal} iType="text" iHandlerFun={inputHandler} />
 
                         <INputSrch lableFor="careHome" labelCont="Care Home" iPlaceholder="Care Home Name ..." iName="careHome" iValue={hName} iType="text" iHandlerFun={inputHandler} />
 

@@ -20,7 +20,9 @@
 
 .navbar a:hover {
     background-color: #fdfbfb;
-    color: #8e9ed3;
+    /* color: darkgreen; */
+    color: indigo;
+    /* color: purple; */
     border-radius: 25%;
     transform: scale(1.1);
 }

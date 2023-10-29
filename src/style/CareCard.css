@@ -27,7 +27,7 @@
 }
 .img-container .care-item {
 	padding: 10px;	
-	max-height: 70px;
+	max-height: 85px;
 }
 
 .img-container .care-item h4 {
@@ -50,13 +50,11 @@
 }
 
 .card-info {
-	background: #8e9ed3;
 	text-transform: capitalize;
 	padding: 10px 0;
 	text-align: center;
 	font-weight: 700;
 	letter-spacing: 3px;
-	color: #3b06ce;
 	width: 100%;
 	display: block;
 	margin: 10px auto;

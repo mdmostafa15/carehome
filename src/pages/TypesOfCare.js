@@ -39,20 +39,34 @@ export default function TypesOfCare() {
 
         if (postal !== "") {
             url = `${url}?postal=${postal}`;
-        }
-        if (area !== "") {
-            if(postal !== "")
-                url = `${url}&area=${area}`;
-            else
-                url = `${url}?area=${area}`
-        } 
-        if (hName !== ""){
-            if(area !=="" )
-                url=`${url}&home=${hName}`;
-            else
-                url=`${url}?home=${hName}`
+
+            if (hName !== ""){
+                url=`${url}&home=${hName}`
+            }
+            if (area !== ""){
+                url=`${url}&area=${area}`
+            }
             
-        }
+        }else if (hName !== ""){
+            url = `${url}?home=${hName}`
+
+            if (postal !== ""){
+                url=`${url}&postal=${postal}`
+            }
+            if (area !== ""){
+                url=`${url}&area=${area}`
+            }
+            
+        }else if (area !== "") {
+            url = `${url}?area=${area}`
+
+            if (hName !== ""){
+                url=`${url}&home=${hName}`
+            }
+            if (postal !== ""){
+                url=`${url}&postal=${postal}`
+            }
+        } 
         if(postal === "" && area === "" && hName === "")
             url = 'http://localhost:5000/api/carehome/';
         
